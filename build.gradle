@@ -1,0 +1,113 @@
+buildscript {
+
+  repositories {
+    maven { url 'https://maven.google.com' }
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:+'
+  }
+}
+
+allprojects {
+  repositories {
+    jcenter()
+    maven {
+      url 'https://maven.google.com'
+    }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+ext {
+
+  supportLibVersion = '26.0.0'
+  constraintLayoutVersion = '1.0.2'
+
+  retrofitVersion = '2.2.0'
+  convertergsonVersion = '2.2.0'
+  adapterrxjavaVersion = '2.1.0'
+
+  okhttpVersion = '3.7.0'
+
+  rxandroidVersion = '2.0.1'
+  rxjavaVersion = '2.0.2'
+
+  butterknifeVersion = '8.5.1'
+  butterknifeCompilerVersion = '8.5.1'
+
+  roomRuntimeVersion = '1.+'
+  roomCompilerVersion = '1.+'
+  roomImplementationVersion = '1.+'
+
+  daggerVersion = '2.8'
+  daggerCompilerVersion = '2.8'
+
+
+  // Testing
+
+  junitVersion = '4.12'
+  espressoVersion = '2.2.2'
+  roomTestImplementationVersion = '1.+'
+
+
+  presentationDependencies = [
+      supportLib           : "com.android.support:appcompat-v7:${supportLibVersion}",
+      constraintLayout     : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+      retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+      convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+      rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+      rxandroid            : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
+      butterknife          : "com.jakewharton:butterknife:${butterknifeVersion}",
+      butterknifeCompiler  : "com.jakewharton:butterknife-compiler:${butterknifeCompilerVersion}",
+      roomRuntime          : "android.arch.persistence.room:runtime:${roomRuntimeVersion}",
+      roomCompiler         : "android.arch.persistence.room:compiler:${roomCompilerVersion}",
+      roomImplementation   : "android.arch.persistence.room:rxjava2:${roomImplementationVersion}",
+      dagger               : "com.google.dagger:dagger:${daggerVersion}",
+      daggerCompiler       : "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+  ]
+
+  presentationTestDependencies = [
+      junit                  : "junit:junit:${junitVersion}",
+      espresso               : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+      roomTestImplementation : "android.arch.persistence.room:rxjava2:${roomTestImplementationVersion}"
+  ]
+
+  dataDependencies = [
+      retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+      convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+      rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+      roomRuntime          : "android.arch.persistence.room:runtime:${roomRuntimeVersion}",
+      roomCompiler         : "android.arch.persistence.room:compiler:${roomCompilerVersion}",
+      roomImplementation   : "android.arch.persistence.room:rxjava2:${roomImplementationVersion}",
+      dagger               : "com.google.dagger:dagger:${daggerVersion}",
+      daggerCompiler       : "com.google.dagger:dagger-compiler:${daggerCompilerVersion}"
+  ]
+
+  dataTestDependencies = [
+      junit                  : "junit:junit:${junitVersion}",
+      espresso               : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+      roomTestImplementation : "android.arch.persistence.room:rxjava2:${roomTestImplementationVersion}"
+  ]
+
+  domainDependencies = [
+      retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+      convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+      rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+      dagger               : "com.google.dagger:dagger:${daggerVersion}",
+      daggerCompiler       : "com.google.dagger:dagger-compiler:${daggerCompilerVersion}"
+  ]
+
+  domainTestDependencies = [
+      junit                  : "junit:junit:${junitVersion}",
+  ]
+}
