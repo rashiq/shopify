@@ -51,6 +51,8 @@ dependencies {
   implementation dataDependencies.roomImplementation
   compile dataDependencies.dagger
   annotationProcessor dataDependencies.daggerCompiler
+  compile dataDependencies.javaxAnnotation
+  compile dataDependencies.javaxInject
 
   testCompile dataTestDependencies.junit
   androidTestCompile dataTestDependencies.espresso

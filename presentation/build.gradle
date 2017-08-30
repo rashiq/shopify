@@ -57,5 +57,4 @@ dependencies {
 
   testCompile presentationTestDependencies.junit
   androidTestCompile presentationTestDependencies.espresso
-
 }

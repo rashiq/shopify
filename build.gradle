@@ -29,7 +29,10 @@ ext {
 
   retrofitVersion = '2.2.0'
   convertergsonVersion = '2.2.0'
-  adapterrxjavaVersion = '2.1.0'
+  adapterrxjavaVersion = '2.3.0'
+
+  javaxInjectVersion = '1'
+  javaxAnnotationVersion = '1.0'
 
   okhttpVersion = '3.7.0'
 
@@ -46,7 +49,6 @@ ext {
   daggerVersion = '2.8'
   daggerCompilerVersion = '2.8'
 
-
   // Testing
 
   junitVersion = '4.12'
@@ -59,7 +61,7 @@ ext {
       constraintLayout     : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
       retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
       convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
-      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava2:${adapterrxjavaVersion}",
       okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
       rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
       rxandroid            : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
@@ -81,9 +83,11 @@ ext {
   dataDependencies = [
       retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
       convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
-      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava2:${adapterrxjavaVersion}",
       okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
       rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+      javaxAnnotation      : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+      javaxInject          : "javax.inject:javax.inject:${javaxInjectVersion}",
       roomRuntime          : "android.arch.persistence.room:runtime:${roomRuntimeVersion}",
       roomCompiler         : "android.arch.persistence.room:compiler:${roomCompilerVersion}",
       roomImplementation   : "android.arch.persistence.room:rxjava2:${roomImplementationVersion}",
@@ -100,7 +104,9 @@ ext {
   domainDependencies = [
       retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
       convertergson        : "com.squareup.retrofit2:converter-gson:${convertergsonVersion}",
-      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava:${adapterrxjavaVersion}",
+      adapterrxjava        : "com.squareup.retrofit2:adapter-rxjava2:${adapterrxjavaVersion}",
+      javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+      javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
       okhttp               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
       rxjava               : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
       dagger               : "com.google.dagger:dagger:${daggerVersion}",
