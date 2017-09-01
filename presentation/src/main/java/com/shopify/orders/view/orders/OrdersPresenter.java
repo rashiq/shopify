@@ -51,7 +51,7 @@ public class OrdersPresenter extends Presenter {
 
   private final class SpentByCustomerObserver extends DisposableObserver<Double> {
     @Override public void onNext(Double totalAmount) {
-      callback.setSpentByCustomer(totalAmount);
+      callback.setSpentByCustomer(String.format("$%s", totalAmount));
     }
 
     @Override public void onError(Throwable e) {
@@ -65,7 +65,7 @@ public class OrdersPresenter extends Presenter {
 
   private final class CountOfItemsSoldObserver extends DisposableObserver<Long> {
     @Override public void onNext(Long count) {
-      callback.setCountOfItemsSold(count);
+      callback.setCountOfItemsSold(String.valueOf(count));
     }
 
     @Override public void onError(Throwable e) {

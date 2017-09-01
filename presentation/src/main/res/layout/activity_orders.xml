@@ -5,16 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="32dp"
     tools:context="com.shopify.orders.view.orders.OrdersActivity">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="12dp"
+      android:fontFamily="sans-serif-light"
+      android:text="How much 💰 did Napoleon spend?"
+      android:textSize="32sp"/>
 
   <TextView
       android:id="@+id/spent_by_customer"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:fontFamily="sans-serif-black"
+      android:layout_marginBottom="32dp"
+      android:text="$0"
+      android:textSize="32sp"/>
+
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="12dp"
+      android:fontFamily="sans-serif-light"
+      android:text="How many Bronze 👜 did you sell?"
+      android:textSize="32sp"/>
 
   <TextView
       android:id="@+id/count_of_items_sold"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:fontFamily="sans-serif-black"
+      android:layout_height="wrap_content"
+      android:text="0"
+      android:textSize="32sp"/>
 
 </LinearLayout>

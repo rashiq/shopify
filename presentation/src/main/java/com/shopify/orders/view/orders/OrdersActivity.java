@@ -45,12 +45,12 @@ public class OrdersActivity extends BaseActivity implements OrdersViewCallback {
 
   }
 
-  @Override public void setSpentByCustomer(Double totalAmount) {
+  @Override public void setSpentByCustomer(String totalAmount) {
     spentByCustomer.setText(String.valueOf(totalAmount));
   }
 
-  @Override public void setCountOfItemsSold(Long count) {
-    countOfItemsSold.setText(String.valueOf(count));
+  @Override public void setCountOfItemsSold(String count) {
+    countOfItemsSold.setText(count);
   }
 
   public interface Injector {
